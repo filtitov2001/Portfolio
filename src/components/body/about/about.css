@@ -15,7 +15,7 @@
   }
   .info-name {
     font-size: 32px;
-    color: blueviolet;
+    color: #6367f6;
   }
   @media only screen and (max-width: 720px) {
     .about-top {

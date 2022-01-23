@@ -1,4 +1,5 @@
 import React from 'react';
+import SocialContact from '../../common/social-contact';
 import './about.css';
 
 function About() {
@@ -14,10 +15,11 @@ function About() {
           <img
             src={require("../../../assets/image/coding.png")}
             className="picture"
-          />
+          /> <br/>
+          Test photo!
         </div>
       </div>
-
+        <SocialContact />
     </div>
   );
 }
