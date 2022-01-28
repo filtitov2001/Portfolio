@@ -5,7 +5,7 @@ import './github-calendar.css'
 
 function Github() {
     
-      return 
+      return (
       <Row style={{justifyContent:"center", paddingBottom:"10px"}}>
         <h1 className="project-heading" style={{paddingBottom:"20px"}}>
           Days I <strong className="purple">Code</strong>
@@ -17,7 +17,8 @@ function Github() {
          color="#5600F5"
          fontSize={16}
         />
-      </Row>;
+      </Row>
+      );
 }
 
 export default Github;
