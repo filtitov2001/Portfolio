@@ -24,8 +24,13 @@ function Skills() {
             </div>
           );
         })}
+        <div className='skills-container'> 
+          <div className="skills-section">
+            <label className="skills-section-title">Days I <strong style={{color:"#6367f6"}}>Code</strong></label>
+          </div> 
+        </div>
+        <Github />
       </div>
-      <Github />
     </div>
   );
 }
