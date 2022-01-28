@@ -23,7 +23,7 @@ function Contcact() {
                 <div className='download'>
                     
                     <a download href={require('../../../assets/test.pdf')}>
-                    <span class="lnr lnr-cloud-download download-icon"></span>Download Resume 
+                    <span class="lnr lnr-cloud-download download-icon"></span>Download CV 
                     </a>
                 </div>
                 </div>

@@ -33,6 +33,11 @@
     font-weight: 800;
 }
 
+.logoPhoto {
+    height: 40px;
+    width: 40px;
+}
+
 @media only screen and (max-width: 720px) {
     .mobile-menu {
         display: flex;
@@ -44,5 +49,10 @@
 
     .logo {
         font-size: 24px;
+    }
+
+    .logoPhoto {
+        height: 27px;
+        width: 27px;
     }
 }

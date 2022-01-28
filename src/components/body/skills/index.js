@@ -1,6 +1,7 @@
 import React from 'react';
 import { SkillsData } from '../../../data/skills';
 import Separator from '../../common/separator';
+import Github from './github-calendar';
 import SkillCard from './skill-card';
 import './skills.css';
 
@@ -24,6 +25,7 @@ function Skills() {
           );
         })}
       </div>
+      <Github />
     </div>
   );
 }
