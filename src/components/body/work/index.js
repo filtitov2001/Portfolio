@@ -1,19 +1,18 @@
 import React from 'react';
-import { WorkData } from '../../../data/work';
+import {WorkData} from '../../../data/work';
 import Separator from '../../common/separator';
 import WorkCard from './work-card';
 import './work.css';
 
 function Work() {
-    const data = WorkData;
-  return (
+    return (
     <div>
         <Separator />
         <label className='section-title '>Work</label>
         <div className='work-list'>
-            {data.map((item) => {
+            {WorkData.map((item) => {
                 return (
-                     <WorkCard item={item} />
+                     <WorkCard key={item.id.toString()} item={item} />
                 )
             })}
         </div>

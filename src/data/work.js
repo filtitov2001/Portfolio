@@ -1,5 +1,6 @@
 export const WorkData = [
     {
+        id: "1",
       company: "Company 1",
       designation: "Software Engineer",
       dateJoining: "02-02-2000",
@@ -9,6 +10,7 @@ export const WorkData = [
       work: "Worken on Unit testing and creating the largest database efficiently. With over 100 people under me, made it work really well.",
     },
     {
+        id: "2",
       company: "Company 2",
       designation: "Software Engineer",
       dateJoining: "02-02-2000",
