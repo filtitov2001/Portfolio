@@ -12,12 +12,12 @@
 
 .skill-icon {
     font-size: 80px;
+
 }
 
 .skill-name {
     font-size: 18px;
 }
-
 
 @media only screen and (max-width: 720px) {
     .skill-card {

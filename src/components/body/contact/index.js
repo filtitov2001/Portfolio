@@ -17,13 +17,13 @@ function Contcact() {
                 <div className="about-photo">
                         <img
                             src={require("../../../assets/image/coding.png")}
-                            className="picture"
+                            className="picture" alt={""}
                         />
                 </div>
                 <div className='download'>
                     
                     <a download href={require('../../../assets/test.pdf')}>
-                    <span class="lnr lnr-cloud-download download-icon"></span>Download CV 
+                    <span className="lnr lnr-cloud-download download-icon"/>Download CV
                     </a>
                 </div>
                 </div>

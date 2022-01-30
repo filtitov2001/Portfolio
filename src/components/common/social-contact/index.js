@@ -8,9 +8,9 @@ function SocialContact() {
     <div className='social-contact'>
       {data.map((item)=>{
           return(
-              <a href={item.link}>
-                  <div className='social-icon-div'>
-                    <img src={item.icon} className='social-icon'/>
+              <a key={item.id.toString()} href={item.link}>
+                  <div key={item.id} className='social-icon-div'>
+                    <img alt={''} key={item.id} src={item.icon} className='social-icon'/>
                   </div>
               </a>
           )
