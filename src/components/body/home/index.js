@@ -12,12 +12,14 @@ function Home() {
 
                   <a href="https://facebook.com" className="home__social-icon">
                       <i className="uil uil-instagram"></i>
+                  </a>
 
+                  <a href="https://facebook.com" className="home__social-icon">
+                      <i className="uil uil-gitlab"></i>
                   </a>
 
                   <a href="https://facebook.com" className="home__social-icon">
                       <i className="uil uil-github-alt"></i>
-
                   </a>
               </div>
               <div className="home__img">

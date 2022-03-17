@@ -1,42 +1,11 @@
 import React from 'react';
 import './header.css'
-// import Web from './web';
-// import Mobile from "./mobile";
-/*==================== MENU SHOW Y HIDDEN ====================*/
-const navMenu = document.getElementById('nav-menu'),
-    navToggle = document.getElementById('nav-toggle'),
-    navClose = document.getElementById('nav-close');
-
-/*===== MENU SHOW =====*/
-/* Validate if constant exists */
-if(navToggle){
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu')
-    })
-}
-
-/*===== MENU HIDDEN =====*/
-/* Validate if constant exists */
-if(navClose){
-    navClose.addEventListener('click', () => {
-        navMenu.classList.remove('show-menu')
-    })
-}
-
-/*==================== REMOVE MENU MOBILE ====================*/
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
 
 function Header() {
   return (
       <header className="header" id="header">
           <nav className="nav container">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a className="nav__logo" href="#">Felix's portfolio</a>
               <div className="nav__menu" id="nav-menu">
                   <ul className="nav__list grid">

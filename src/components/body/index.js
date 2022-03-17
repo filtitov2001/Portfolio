@@ -6,7 +6,6 @@ import React from 'react';
 // import Projects from './projects';
 // import Work from './work';
 import Home from "./home";
-import './body.css';
 
 function Body() {
   return (
