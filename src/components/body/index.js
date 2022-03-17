@@ -1,6 +1,6 @@
 import React from 'react';
 // import Skills from './skills';
-// import About from './about';
+import About from './about';
 //
 // import Contcact from './contact';
 // import Projects from './projects';
@@ -9,13 +9,10 @@ import Home from "./home";
 
 function Body() {
   return (
-    <div>
-        <section className="home section" id="home">
-            <Home />
-        </section>
-      {/*<section id='about'>*/}
-      {/*  <About />*/}
-      {/*</section>*/}
+      <main className="main">
+          <Home />
+          <About />
+
       {/*<section id='projects'>*/}
       {/*  <Projects />*/}
       {/*</section>*/}
@@ -28,7 +25,7 @@ function Body() {
       {/*<section id='contacts'>*/}
       {/*  <Contcact />*/}
       {/*</section>*/}
-    </div>
+    </main>
   );
 }
 
