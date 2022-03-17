@@ -61,6 +61,9 @@
 .home__scroll-button{
     color: var(--first-color);
     transition: .3s;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    -moz-transition: .3s;
 }
 
 .home__scroll-button:hover{
