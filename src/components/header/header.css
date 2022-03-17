@@ -1,58 +1,94 @@
-.header {
+@import "/src/components/main/home.css";
+
+/*==================== NAV ====================*/
+.nav{
+    max-width: 1024px;
+    height: var(--header-height);
     display: flex;
     justify-content: space-between;
-    flex: 1;
-    padding: 12px;
-    position: relative;
     align-items: center;
-
 }
 
-.menu {
+.nav__logo,
+.nav__toggle{
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__logo:hover{
+    color: var(--first-color);
+}
+
+.nav__toggle{
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.nav__toggle:hover{
+    color: var(--first-color);
+}
+
+@media screen and (max-width: 767px){
+    .nav__menu{
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1px 4px rgba(0,0,0,.15);
+        border-radius: 1.5rem 1.5rem 0 0;
+        transition: .3s;
+    }
+}
+
+.nav__list{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.nav__link{
     display: flex;
-    flex: 1;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
 }
 
-.menu-icon {
-    font-size: 32px;
+.nav__link:hover{
+    color: var(--first-color);
 }
 
-.mobile-menu {
-    display: none;
+.nav__icon{
+    font-size: 1.2rem;
 }
 
-.web-menu {
-    display: flex;
+.nav__close{
+    position: absolute;
+    right: 1.3rem;
+    bottom: .5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color);
 }
 
-.logo {
-    display: flex;
-    font-size: 36px;
-    color: #6367f6;
-    font-weight: 800;
+.nav__close:hover{
+    color: var(--first-color-alt);
 }
 
-.logoPhoto {
-    height: 40px;
-    width: 40px;
+.show-menu{
+    bottom: 0;
+}
+/* show menu */
+
+
+/* Active link */
+.active-link{
+    color: var(--first-color);
 }
 
-@media only screen and (max-width: 720px) {
-    .mobile-menu {
-        display: flex;
-    }
-
-    .web-menu {
-        display: none;
-    }
-
-    .logo {
-        font-size: 24px;
-    }
-
-    .logoPhoto {
-        height: 27px;
-        width: 27px;
-    }
+/* Change background header */
+.scroll-header{
+    box-shadow: 0 -1px 4px rgba(0,0,0,.15);
 }
