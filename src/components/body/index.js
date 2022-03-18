@@ -2,7 +2,7 @@ import React from 'react';
 // import Skills from './skills';
 import About from './about';
 //
-// import Contcact from './contact';
+import Contact from './contact';
 // import Projects from './projects';
 // import Work from './work';
 import Home from "./home";
@@ -23,7 +23,7 @@ function Body() {
       {/*  <Work />*/}
       {/*</section>*/}
       {/*<section id='contacts'>*/}
-      {/*  <Contcact />*/}
+        <Contact />
       {/*</section>*/}
     </main>
   );
