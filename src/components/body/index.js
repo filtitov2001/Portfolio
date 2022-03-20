@@ -1,17 +1,18 @@
 import React from 'react';
-// import Skills from './skills';
 import About from './about';
 //
 import Contact from './contact';
 // import Projects from './projects';
 // import Work from './work';
 import Home from "./home";
+import Skills from "./skills";
 
 function Body() {
   return (
       <main className="main">
           <Home />
           <About />
+          <Skills />
 
       {/*<section id='projects'>*/}
       {/*  <Projects />*/}

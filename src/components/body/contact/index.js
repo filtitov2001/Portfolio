@@ -66,7 +66,10 @@ function Contact() {
                       <a href="#" className="button button--flex">
                           Send Message
                           <i className="uil uil-message button__icon"></i>
+                          <br/>
+                          <p> (Temporarily unavailable!)</p>
                       </a>
+
                   </div>
               </form>
           </div>
