@@ -1,7 +1,6 @@
 import React from 'react';
 import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
-import './github-calendar.css'
 
 function Github() {
     const element = document.querySelector(':root'),
