@@ -6,6 +6,8 @@ import Contact from './contact';
 // import Work from './work';
 import Home from "./home";
 import Skills from "./skills";
+import Qualification from "./work";
+// import Github from "./skills/github-calendar";
 
 function Body() {
   return (
@@ -13,6 +15,8 @@ function Body() {
           <Home />
           <About />
           <Skills />
+          <Qualification />
+          {/*<Github />*/}
 
       {/*<section id='projects'>*/}
       {/*  <Projects />*/}
