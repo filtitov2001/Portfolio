@@ -7,7 +7,7 @@ import Contact from './contact';
 import Home from "./home";
 import Skills from "./skills";
 import Qualification from "./work";
-// import Github from "./skills/github-calendar";
+import Github from "./github/github-calendar";
 
 function Body() {
   return (
@@ -16,7 +16,7 @@ function Body() {
           <About />
           <Skills />
           <Qualification />
-          {/*<Github />*/}
+          <Github />
 
       {/*<section id='projects'>*/}
       {/*  <Projects />*/}
