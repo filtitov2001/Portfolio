@@ -1,30 +1,25 @@
 import React from 'react';
-import Skills from './skills';
 import About from './about';
-import './body.css';
-import Contcact from './contact';
-import Projects from './projects';
-import Work from './work';
+import Contact from './contact';
+import Home from "./home";
+import Skills from "./skills";
+import Qualification from "./work";
+import Github from "./github/github-calendar";
+import Services from "./services";
+import Projects from "./projects";
 
 function Body() {
   return (
-    <div className='body'>
-      <section id='about'>
-        <About />
-      </section>
-      <section id='projects'>
-        <Projects />
-      </section>
-      <section id='skils'>
-        <Skills />
-      </section>
-      <section id='work'>
-        <Work />
-      </section>
-      <section id='contacts'>
-        <Contcact />
-      </section>
-    </div>
+      <main className="main">
+          <Home />
+          <About />
+          <Skills />
+          <Qualification />
+          <Github />
+          <Services />
+          <Projects />
+          <Contact />
+    </main>
   );
 }
 

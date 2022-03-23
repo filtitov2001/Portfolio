@@ -1,33 +1,29 @@
 export const ProjectData = [
     {
-      id: "1",
-      title: "Random Project 2",
-      about:
-        "This is a random project I am using to illustrate in my video. This is channel overreacted and I hope you are enjoying this video. Make sure you like and comment if you have any doubt.",
-      tags: ["ReactJs", "NodeJs", "Firebase", "Healthcare"],
+      id: 0,
+      title: "Brand Website",
+      description: "Website adaptable to all devices, with ui components and animated interactions.",
+
       demo: "www.example.com",
-      github: "www.example.com",
-      image: require('../assets/projects/Cover.png')
+      image: require('../assets/portfolio1.jpg')
     },
-  
     {
-      id: "2",
-      title: "Random Project 1",
-      about:
-        "This is a random project I am using to illustrate in my video. This is channel overreacted and I hope you are enjoying this video. Make sure you like and comment if you have any doubt.",
-      tags: [
-        "ReactJs",
-        "NodeJs",
-        "Firebase",
-        "Healthcare",
-        "ReactJs",
-        "NodeJs",
-        "Firebase",
-        "Healthcare",
-      ],
+      id: 1,
+      title: "Brand Website",
+      description: "Website adaptable to all devices, with ui components and animated interactions.",
+
       demo: "www.example.com",
       github: "www.example.com",
-      image:
-        "https://cdn.dribbble.com/users/2657627/screenshots/13959270/media/b1a8b2b53760dc5c10e6cddc1409a3a1.png?compress=1&resize=400x300",
+      image: require('../assets/portfolio2.jpg')
     },
-  ];
+    {
+      id: 2,
+      title: "Brand Website",
+      description: "Website adaptable to all devices, with ui components and animated interactions.",
+
+      demo: "www.example.com",
+      github: "www.example.com",
+      image: require('../assets/portfolio3.jpg')
+    }
+
+];
