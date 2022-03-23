@@ -5,7 +5,7 @@ export const ServicesData = [
         id: 0,
         profession: "iOS",
         status: "Developer",
-        icon: <i className="uil uil-web-grid services__icon"></i>,
+        icon: <i className="uil uil-apple-alt services__icon"></i>,
         skills: [
             {
                 id: 0,
@@ -27,9 +27,9 @@ export const ServicesData = [
     },
     {
         id: 0,
-        profession: "iOS",
+        profession: "Frontend",
         status: "Developer",
-        icon: <i className="uil uil-web-grid services__icon"></i>,
+        icon: <i className="uil uil-browser services__icon"></i>,
         skills: [
             {
                 id: 0,
@@ -51,9 +51,9 @@ export const ServicesData = [
     },
     {
         id: 0,
-        profession: "iOS",
+        profession: "Backend",
         status: "Developer",
-        icon: <i className="uil uil-web-grid services__icon"></i>,
+        icon: <i className="uil uil-server-network-alt services__icon"></i>,
         skills: [
             {
                 id: 0,
