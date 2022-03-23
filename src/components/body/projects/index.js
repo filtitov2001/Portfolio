@@ -1,6 +1,5 @@
 import React from 'react';
 import {ProjectData} from '../../../data/projects';
-// import ProjectCard from './project-card';
 import './projects.css';
 
 function Projects() {
@@ -19,7 +18,6 @@ function Projects() {
                                 <div className="portfolio__data">
                                     <h3 className="portfolio__title">{project.title}</h3>
                                     <p className="portfolio__description">{project.description}</p>
-                                    {/*<div className="portfolio__buttons">*/}
                                         {project.demo && (
                                             <a className="button button--flex button--small portfolio__button" href={project.demo}>
                                                 Demo
@@ -33,7 +31,6 @@ function Projects() {
                                                 <i className="uil uil-github-alt button__icon"></i>
                                             </a>
                                         )}
-                                    {/*</div>*/}
                                 </div>
                             </div>
                         );

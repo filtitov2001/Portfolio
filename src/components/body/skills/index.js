@@ -1,6 +1,6 @@
 import React from 'react';
 import {SkillsData} from '../../../data/skills';
-import SkillCard from './skill-card';
+import SkillCard from './skill-card/skill-card';
 import './skills.css';
 
 function Skills() {
