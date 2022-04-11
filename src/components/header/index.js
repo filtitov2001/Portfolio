@@ -1,5 +1,6 @@
 import React from 'react';
 import './header.css'
+import {changeTheme} from "./script";
 
 function Header() {
   return (
@@ -45,7 +46,7 @@ function Header() {
               </div>
 
               <div className="nav__btns">
-                  <i className="uil uil-moon change-theme" id="theme-button"></i>
+                  <i onMouseEnter={changeTheme} className="uil uil-moon change-theme" id="theme-button"></i>
 
                   <div className="nav__toggle" id="nav-toggle">
                       <i className="uil uil-apps"></i>
