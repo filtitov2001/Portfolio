@@ -1,6 +1,7 @@
 import React from 'react';
 import {ServicesData} from "../../../data/services";
 import ServicesCard from "./services_card/services_card";
+import {showServices} from "./script";
 import './services.css'
 
 function Services() {
@@ -12,7 +13,7 @@ function Services() {
             <div className="services__container container grid">
                 {ServicesData.map((item) => {
                     return(
-                        <div className="services__content">
+                        <div onMouseEnter={showServices} className="services__content">
                             <div>
                                 {item.icon}
                                 <h3 className="services__title">{item.profession}<br/>{item.status}</h3>

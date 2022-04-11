@@ -2,6 +2,7 @@ import React from 'react';
 import {QualificationData} from '../../../data/qualification';
 import QualificationCard from "./qualification-card/qualification-card";
 import './qualification.css';
+import {showQualification} from "./script";
 
 
 
@@ -12,7 +13,7 @@ function Qualification() {
             <span className="section__subtitle">My personal journey</span>
 
             <div className="qualification-container container">
-                <div className="qualification__tabs">
+                <div onMouseEnter={showQualification} className="qualification__tabs">
                     <div className="qualification__button button--flex qualification__active" data-target='#education'>
                         <i className="uil uil-graduation-cap qualification__icon"></i>
                         Education
