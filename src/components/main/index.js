@@ -5,6 +5,7 @@ import Header from '../header';
 import './main.css'
 import ScrollUp from "../scroll-up";
 
+
 function Main() {
 
   return (

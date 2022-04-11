@@ -1,6 +1,6 @@
 import React from 'react';
 import './scroll.css'
-import {scroll_up} from "./script";
+
 
 
 function ScrollUp() {
