@@ -1,8 +1,11 @@
+import React from "react";
+
 export const SkillsData = [
     {
       id: 1,
       type: "Frontend",
       experience: "More than 2 years",
+      icon: <i className="uil uil-brackets-curly skills__icon"></i>,
       list: [
         {
           name: "HTML",
@@ -26,6 +29,7 @@ export const SkillsData = [
       id: "2",
       type: "Backend",
       experience: "More than 2 years",
+      icon: <i className="uil uil-servers skills__icon"></i>,
       list: [
         {
           name: "Java",
@@ -53,6 +57,7 @@ export const SkillsData = [
     id: "3",
     type: "iOS Develop",
     experience: "More than 2 years",
+    icon: <i className="uil uil-apple skills__icon"></i>,
     list: [
       {
         name: "Swift",
@@ -72,6 +77,7 @@ export const SkillsData = [
     id: "4",
     type: "Database",
     experience: "More than 2 years",
+    icon: <i className="uil uil-database skills__icon"></i>,
     list: [
       {
         name: "MySQL",
