@@ -31,7 +31,7 @@ function Skills() {
                         <div className={'skills__content ' + firstSkill}>
 
                             <div onMouseEnter={showSkills} className="skills__header">
-                                {item.icon}
+                                <i className={"uil " + item.icon + " skills__icon"}></i>
                                 <div>
                                     <h1 className="skills__title">{item.type}</h1>
                                     <span className="skills__subtitle">{item.experience}</span>

@@ -25,5 +25,4 @@ export const ProjectData = [
       github: "www.example.com",
       image: require('../assets/portfolio3.jpg')
     }
-
 ];
