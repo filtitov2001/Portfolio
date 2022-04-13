@@ -25,6 +25,7 @@
 
 .portfolio__button{
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .portfolio__button:hover .button__icon{

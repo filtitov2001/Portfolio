@@ -10,6 +10,7 @@ function Main() {
 
   return (
       <div>
+          {/*<ReactNotifications />*/}
           <Header />
           <Body />
           <Footer />

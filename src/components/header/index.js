@@ -9,7 +9,9 @@ function Header() {
       <header className="header" id="header">
           <nav className="nav container">
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a className="nav__logo" href="#">Felix's portfolio</a>
+              <a className="nav__logo" href="#">
+                  Felix's portfolio
+              </a>
               <div className="nav__menu" id="nav-menu">
                   <ul className="nav__list grid">
                       <li className="nav__item">
