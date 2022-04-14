@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import SkillCard from './skill-card/skill-card';
 import './skills.css';
 import {db} from "../../../firebase-config";
-import {collection, getDocs, onSnapshot} from "@firebase/firestore";
+import {collection, onSnapshot} from "@firebase/firestore";
 import {showSkills} from "./script";
 
 
@@ -34,7 +34,7 @@ function Skills() {
           <span className="section__subtitle">My technical level</span>
             <div className="skills__container container grid">
                 {skills.map((item) => {
-                    const firstSkill = parseInt(item.id) === 1 ? 'skills__open' : 'skills__close';
+                    const firstSkill = parseInt(item.id) === 0 ? 'skills__open' : 'skills__close';
 
                     return(
                         <div className={'skills__content ' + firstSkill}>

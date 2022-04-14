@@ -36,7 +36,7 @@ export const ContactUs = () => {
         const message = document.getElementById("message").value;
 
         if ((name === null || name === "") || (email === null || email === "") || (subject === null || subject === "") || (message === null || message === "")) {
-            createNotification("Error!", "Fill all the fields!", 'error');
+            createNotification("Error!", "Fill in all fields!", 'error');
             return false;
         } else if (!validateEmail(email)) {
             createNotification("Error!", "Check your Email!", 'error');

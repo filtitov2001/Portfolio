@@ -1,8 +1,19 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {ProjectData} from '../../../data/projects';
 import './projects.css';
+import {collection, onSnapshot} from "@firebase/firestore";
+import {db} from "../../../firebase-config";
 
 function Projects() {
+    const [projects, setProjects] = useState([]);
+    useEffect(
+        () =>
+            onSnapshot(collection(db, "projects"), (snapshot) =>
+                setProjects(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+            ),
+        []
+    );
+
     return(
         <section className="portfolio section" id="portfolio">
             <h2 className="section__title">Projects</h2>
@@ -10,7 +21,7 @@ function Projects() {
 
             <div className="portfolio__container container swiper-container">
                 <div className="swiper-wrapper">
-                    {ProjectData.map((project) => {
+                    {projects.map((project) => {
                         return(
                             <div className="portfolio__content grid swiper-slide">
                                 <img src={project.image} alt="" className="portfolio__img" />

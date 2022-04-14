@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import {QualificationData} from '../../../data/qualification';
 import QualificationCard from "./qualification-card/qualification-card";
 import './qualification.css';
 import {showQualification} from "./script";
