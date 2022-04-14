@@ -1,4 +1,4 @@
-export const changeTheme = () => {
+export const changeTheme =  async () => {
     const themeButton = document.getElementById('theme-button')
     const darkTheme = 'dark-theme'
     const iconTheme = 'uil-sun'
@@ -19,7 +19,7 @@ export const changeTheme = () => {
     }
 
 // Activate / deactivate the theme manually with the button
-    themeButton.addEventListener('click', () => {
+    await themeButton.addEventListener('click', () => {
         // Add or remove the dark / icon theme
         document.body.classList.toggle(darkTheme)
         themeButton.classList.toggle(iconTheme)

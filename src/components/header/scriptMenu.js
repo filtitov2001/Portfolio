@@ -1,4 +1,4 @@
-export const showMenu = () => {
+export const showMenu = async () => {
     const navMenu = document.getElementById('nav-menu'),
         navToggle = document.getElementById('nav-toggle'),
         navClose = document.getElementById('nav-close');
@@ -27,5 +27,5 @@ export const showMenu = () => {
         // When we click on each nav__link, we remove the show-menu class
         navMenu.classList.remove('show-menu')
     }
-    navLink.forEach(n => n.addEventListener('click', linkAction))
+    await navLink.forEach(n => n.addEventListener('click', linkAction))
 }

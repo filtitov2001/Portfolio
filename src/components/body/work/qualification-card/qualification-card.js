@@ -23,8 +23,8 @@ function getMainInfo(qualification) {
     );
 }
 
-function getRoadBlock(qualification, lastElementId) {
-    if (isLast(qualification.id, lastElementId)) {
+function getRoadBlock(index, lastElementId) {
+    if (isLast(index, lastElementId)) {
         return (
             <div>
                 <span className="qualification__rounder"></span>
@@ -40,20 +40,20 @@ function getRoadBlock(qualification, lastElementId) {
     }
 }
 
-function getBlockById(qualification, lastElementId) {
+function getBlockById(qualification, lastElementId, index) {
 
-    if (isEven(qualification.id)) {
+    if (isEven(index)) {
         return(
             <div className="qualification__data">
                 {getMainInfo(qualification)}
-                {getRoadBlock(qualification, lastElementId)}
+                {getRoadBlock(index, lastElementId)}
             </div>
         );
     } else {
         return(
             <div className="qualification__data">
                 <div></div>
-                {getRoadBlock(qualification, lastElementId)}
+                {getRoadBlock(index, lastElementId)}
                 {getMainInfo(qualification)}
             </div>
         );
@@ -61,7 +61,7 @@ function getBlockById(qualification, lastElementId) {
 }
 
 function QualificationCard(props) {
-      return (getBlockById(props.qualification, props.lastElementId));
+      return (getBlockById(props.qualification, props.lastElementId, props.index));
 }
 
 export default QualificationCard;

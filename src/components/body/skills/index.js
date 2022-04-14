@@ -2,29 +2,38 @@ import React, {useEffect, useState} from 'react';
 import SkillCard from './skill-card/skill-card';
 import './skills.css';
 import {db} from "../../../firebase-config";
-import {collection, getDocs} from "@firebase/firestore";
-import {SkillsData} from "../../../data/skills";
+import {collection, getDocs, onSnapshot} from "@firebase/firestore";
 import {showSkills} from "./script";
 
 
 function Skills() {
     const [skills, setSkills] = useState([]);
-    const skillsCollectionRef = collection(db, "skills")
-    useEffect(() => {
-        const getSkills = async () => {
-            const data = await getDocs(skillsCollectionRef);
-            setSkills(data.docs.map((doc) => ({ ...doc.data(), id: doc.id})))
-        };
+    // const skillsCollectionRef = collection(db, "skills")
+    // useEffect(() => {
+    //     // const getSkills = async () => {
+    //     //     const data = await getDocs(skillsCollectionRef);
+    //     //     setSkills(data.docs.map((doc) => ({ ...doc.data(), id: doc.id})))
+    //     // };
+    //     //
+    //     // getSkills();
+    //     onSnapshot(collection(db, "skills"), (snapshot) =>
+    //         setSkills(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id}))))
+    // }, [])
 
-        getSkills();
-    }, [skillsCollectionRef])
+    useEffect(
+        () =>
+            onSnapshot(collection(db, "skills"), (snapshot) =>
+                setSkills(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+            ),
+        []
+    );
 
     return (
         <section className="skills section" id="skills">
           <h2 className="section__title">Skills</h2>
           <span className="section__subtitle">My technical level</span>
             <div className="skills__container container grid">
-                {SkillsData.map((item) => {
+                {skills.map((item) => {
                     const firstSkill = parseInt(item.id) === 1 ? 'skills__open' : 'skills__close';
 
                     return(
@@ -41,7 +50,7 @@ function Skills() {
 
 
                             <div className="skills__list grid">
-                                {item.list.map((skill, index) => {
+                                {item.list.map((skill) => {
                                     return <SkillCard skill={skill} />;
                                 })}
                             </div>
