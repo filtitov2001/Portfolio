@@ -3,7 +3,7 @@ import './projects.css';
 import {collection, onSnapshot} from "@firebase/firestore";
 import {db} from "../../../firebase-config";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {Pagination, Mousewheel, Keyboard, Navigation, Autoplay} from "swiper";
+import {Pagination, Mousewheel, Keyboard, Autoplay} from "swiper";
 
 
 function Projects() {
@@ -30,10 +30,9 @@ function Projects() {
                     pagination={{
                         clickable: true
                     }}
-                    navigation={true}
                     mousewheel={true}
                     keyboard={true}
-                    modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+                    modules={[Pagination, Mousewheel, Keyboard, Autoplay]}
             >
                 {projects.map((project) => {
                     return (
