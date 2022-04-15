@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import {ProjectData} from '../../../data/projects';
 import './projects.css';
 import {collection, onSnapshot} from "@firebase/firestore";
 import {db} from "../../../firebase-config";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import {Pagination, Mousewheel, Keyboard, Navigation, Autoplay} from "swiper";
+
 
 function Projects() {
     const [projects, setProjects] = useState([]);
@@ -18,44 +20,48 @@ function Projects() {
         <section className="portfolio section" id="portfolio">
             <h2 className="section__title">Projects</h2>
             <span className="section__subtitle">Most recent work</span>
+            <Swiper className={'portfolio__container container swiper-container'}
+                    cssMode={true}
+                    // loop={true}
+                    autoplay={{
+                        delay: 5000,
+                        disableOnInteraction: false
+                    }}
+                    pagination={{
+                        clickable: true
+                    }}
+                    navigation={true}
+                    mousewheel={true}
+                    keyboard={true}
+                    modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
+            >
+                {projects.map((project) => {
+                    return (
+                        <SwiperSlide className={'portfolio__content grid'}>
+                            <img src={project.image} alt="" className="portfolio__img"/>
+                            <div className="portfolio__data">
+                                <h3 className="portfolio__title">{project.title}</h3>
+                                <p className="portfolio__description">{project.description}</p>
+                                {project.demo && (
+                                    <a className="button button--flex button--small portfolio__button"
+                                       href={project.demo}>
+                                        Demo
+                                        <i className="uil uil-arrow-right button__icon"></i>
+                                    </a>
+                                )}
 
-            <div className="portfolio__container container swiper-container">
-                <div className="swiper-wrapper">
-                    {projects.map((project) => {
-                        return(
-                            <div className="portfolio__content grid swiper-slide">
-                                <img src={project.image} alt="" className="portfolio__img" />
-
-                                <div className="portfolio__data">
-                                    <h3 className="portfolio__title">{project.title}</h3>
-                                    <p className="portfolio__description">{project.description}</p>
-                                        {project.demo && (
-                                            <a className="button button--flex button--small portfolio__button" href={project.demo}>
-                                                Demo
-                                                <i className="uil uil-arrow-right button__icon"></i>
-                                            </a>
-                                        )}
-
-                                        {project.github && (
-                                            <a className="button button--flex button--small portfolio__button" href={project.github}>
-                                                Source code
-                                                <i className="uil uil-github-alt button__icon"></i>
-                                            </a>
-                                        )}
-                                </div>
+                                {project.github && (
+                                    <a className="button button--flex button--small portfolio__button"
+                                       href={project.github}>
+                                        Source code
+                                        <i className="uil uil-github-alt button__icon"></i>
+                                    </a>
+                                )}
                             </div>
-                        );
-                    })}
-                </div>
-                <div className="swiper-button-next">
-                    <i className="uil uil-angle-right-b swiper-portfolio-icon"></i>
-                </div>
-                <div className="swiper-button-prev">
-                    <i className="uil uil-angle-left-b swiper-portfolio-icon"></i>
-                </div>
-
-                <div className="swiper-pagination"></div>
-            </div>
+                        </SwiperSlide>
+                    );
+                })}
+            </Swiper>
         </section>
     );
 }
