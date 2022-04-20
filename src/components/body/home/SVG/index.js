@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SVG() {
+function SVG(props) {
     return (
         <svg className="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
              xlink="http://www.w3.org/1999/xlink">
@@ -15,8 +15,8 @@ function SVG() {
             165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403
             129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028
             -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                <image className="home__blob-img" x={12} y={18}
-                       href="https://firebasestorage.googleapis.com/v0/b/portfolio-71b8e.appspot.com/o/perfil.png?alt=media&token=0bf162af-eabb-4484-b1f7-711e73d65132"/>
+                <image className="home__blob-img" x={props.coordinates.x} y={props.coordinates.y}
+                       href={props.photo} />
             </g>
         </svg>
     );

@@ -19,7 +19,7 @@ function Projects() {
     return(
         <section className="portfolio section" id="portfolio">
             <h2 className="section__title">Projects</h2>
-            <span className="section__subtitle">Most recent work</span>
+            <span className="section__subtitle">Most recent works</span>
             <Swiper className={'portfolio__container container swiper-container'}
                     cssMode={true}
                     // loop={true}
