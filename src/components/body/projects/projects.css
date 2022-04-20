@@ -25,6 +25,7 @@
 
 .portfolio__button{
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .portfolio__button:hover .button__icon{
@@ -49,7 +50,7 @@
     right: -.5rem;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets{
+.swiper-horizontal > .swiper-pagination-bullets{
     bottom: -2.5rem;
 }
 

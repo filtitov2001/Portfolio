@@ -6,6 +6,7 @@ function Github() {
     const element = document.querySelector(':root'),
         style = window.getComputedStyle(element),
         color = style.getPropertyValue('--github-color');
+    const legend = window.screen.width < 625
 
       return (
               <Row className='row-style container'>
@@ -15,6 +16,8 @@ function Github() {
                       blockMargin={8}
                       blockRadius={2}
                       color={color}
+                      fontSize={12}
+                      hideColorLegend={legend}
                   />
               </Row>
 

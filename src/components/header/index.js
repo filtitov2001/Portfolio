@@ -1,12 +1,31 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './header.css'
+import {changeTheme} from "./scriptTheme";
+import {showMenu} from "./scriptMenu";
+import {onValue, ref} from "firebase/database";
+import {rdb} from "../../firebase-config";
+
 
 function Header() {
+    const [homeName, setHomeName] = useState("");
+
+    useEffect(() => {
+        onValue(ref(rdb, "maininfo/name"), (snapshot) => {
+            setHomeName("");
+            const data = snapshot.val();
+            if (data !== null) {
+                setHomeName(data)
+            }
+        });
+    }, []);
+
   return (
       <header className="header" id="header">
           <nav className="nav container">
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a className="nav__logo" href="#">Felix's portfolio</a>
+              <a className="nav__logo" href="#">
+                  {homeName}'s portfolio
+              </a>
               <div className="nav__menu" id="nav-menu">
                   <ul className="nav__list grid">
                       <li className="nav__item">
@@ -45,10 +64,10 @@ function Header() {
               </div>
 
               <div className="nav__btns">
-                  <i className="uil uil-moon change-theme" id="theme-button"></i>
+                  <i onMouseEnter={changeTheme} className="uil uil-moon change-theme" id="theme-button"></i>
 
                   <div className="nav__toggle" id="nav-toggle">
-                      <i className="uil uil-apps"></i>
+                      <i onMouseEnter={showMenu} className="uil uil-apps"></i>
                   </div>
               </div>
           </nav>

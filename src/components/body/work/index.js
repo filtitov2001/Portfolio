@@ -1,18 +1,27 @@
-import React from 'react';
-import {QualificationData} from '../../../data/qualification';
+import React, {useEffect, useState} from 'react';
 import QualificationCard from "./qualification-card/qualification-card";
 import './qualification.css';
-
-
+import {showQualification} from "./script";
+import {collection, onSnapshot} from "@firebase/firestore";
+import {db} from "../../../firebase-config";
 
 function Qualification() {
+    const [qualifications, setQualifications] = useState([]);
+    useEffect(
+        () =>
+            onSnapshot(collection(db, "qualifications"), (snapshot) =>
+                setQualifications(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+            ),
+        []
+    );
+
     return (
         <section className="qualification section">
             <h2 className="section__title">Qualification</h2>
             <span className="section__subtitle">My personal journey</span>
 
             <div className="qualification-container container">
-                <div className="qualification__tabs">
+                <div onMouseEnter={showQualification} className="qualification__tabs">
                     <div className="qualification__button button--flex qualification__active" data-target='#education'>
                         <i className="uil uil-graduation-cap qualification__icon"></i>
                         Education
@@ -24,10 +33,10 @@ function Qualification() {
                 </div>
 
                 <div className="qualification__sections">
-                    {QualificationData.map((item) => {
+                    {qualifications.map((item) => {
                         let firstQualification;
                         let qualificationId;
-                        if (item.id === 0) {
+                        if (parseInt(item.id) === 0) {
                             firstQualification = 'qualification__content qualification__active'
                             qualificationId = item.name
                         } else {
@@ -35,18 +44,16 @@ function Qualification() {
                             qualificationId = item.name
                         }
 
-                        const lastIndex = item.qualifications.length - 1;
-                        const lastElement = item.qualifications[lastIndex];
-                        const lastElementId = lastElement.id;
+                        const lastIndex = item.experience.length - 1;
 
                         return(
 
                             <div className={firstQualification} data-content id={qualificationId}>
-                                {item.qualifications.map((qualification) => {
+                                {item.experience.map((qualification, index = item.experience.indexOf(qualification)) => {
                                     return <QualificationCard
-                                        key={qualification.id.toString()}
-                                                              qualification={qualification}
-                                                              lastElementId={lastElementId} />;
+                                        index={index}
+                                        qualification={qualification}
+                                        lastElementId={lastIndex} />;
                                 })}
                             </div>
                         );

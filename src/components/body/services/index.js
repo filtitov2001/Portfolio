@@ -1,20 +1,30 @@
-import React from 'react';
-import {ServicesData} from "../../../data/services";
+import React, {useEffect, useState} from 'react';
 import ServicesCard from "./services_card/services_card";
+import {showServices} from "./script";
 import './services.css'
+import {collection, onSnapshot} from "@firebase/firestore";
+import {db} from "../../../firebase-config";
 
 function Services() {
+    const [services, setServices] = useState([]);
+    useEffect(
+        () =>
+            onSnapshot(collection(db, "services"), (snapshot) =>
+                setServices(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+            ),
+        []
+    );
     return (
         <section className="services section" id="services">
             <h2 className="section__title">Services</h2>
-            <span className="section__subtitle">What i offer</span>
+            <span className="section__subtitle">What I offer</span>
 
             <div className="services__container container grid">
-                {ServicesData.map((item) => {
+                {services.map((item) => {
                     return(
-                        <div className="services__content">
+                        <div onMouseEnter={showServices} className="services__content">
                             <div>
-                                {item.icon}
+                                <i className={"uil " + item.icon + " services__icon"}></i>
                                 <h3 className="services__title">{item.profession}<br/>{item.status}</h3>
                             </div>
 
