@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import {onValue, ref} from "firebase/database";
 import {rdb} from "./firebase-config";
 
+
 function App() {
   const [color, setColor] = useState('');
 
