@@ -2,7 +2,7 @@ import React, {useRef} from 'react';
 import emailjs from '@emailjs/browser';
 import './notification.css'
 
-const VanillaToasts = require('@filtitov2001/vanillatoasts');
+const VanillaToasts = require('@thefiltitoff/vanillatoasts');
 
 function createNotification(title, message, type) {
     const icon = type === 'success'
