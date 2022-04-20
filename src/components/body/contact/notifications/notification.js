@@ -19,6 +19,10 @@ function createNotification(title, message, type) {
 }
 
 export const ContactUs = () => {
+    const serviceID = process.env.REACT_APP_SERVICE_ID;
+    const templateID = process.env.REACT_APP_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_PUBLIC_KEY;
+
     const form = useRef();
 
     const validateEmail = (email) => {
@@ -54,7 +58,7 @@ export const ContactUs = () => {
 
     const sendEmail = () => {
 
-        emailjs.sendForm('service_11nclwg', 'template_h9fp0vn', form.current, 'Lo8xTX22sE3RU0sAG')
+        emailjs.sendForm(serviceID, templateID, form.current, publicKey)
             .then((result) => {
                 // console.log(result.text);
                 // window.alert(result.text)

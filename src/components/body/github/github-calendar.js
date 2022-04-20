@@ -3,6 +3,8 @@ import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
 
 function Github() {
+    const username = process.env.REACT_APP_GIT_USERNAME;
+
     const element = document.querySelector(':root'),
         style = window.getComputedStyle(element),
         color = style.getPropertyValue('--github-color');
@@ -11,7 +13,7 @@ function Github() {
       return (
               <Row className='row-style container'>
                   <GitHubCalendar
-                      username="filtitov2001"
+                      username={username}
                       blockSize={20}
                       blockMargin={8}
                       blockRadius={2}
@@ -20,7 +22,6 @@ function Github() {
                       hideColorLegend={legend}
                   />
               </Row>
-
       );
 }
 

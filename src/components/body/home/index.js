@@ -35,8 +35,6 @@ function Home() {
         });
     }, []);
 
-    console.log(mainInfo);
-
   return (
       <section className="home section" id="home">
           <div className="home__container container grid">
